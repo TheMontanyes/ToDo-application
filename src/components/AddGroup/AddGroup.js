@@ -2,10 +2,19 @@ export default {
 
   data() {
     return {
-      titleGroup: ''
+      titleGroup: '',
+      showModal: false
     }
   },
 
+  directives: {
+    focus: {
+      inserted: function (el) {
+        el.focus()
+      }
+    },
+  },
+  
   methods: {
     addGroup () {
       const newGroup = {

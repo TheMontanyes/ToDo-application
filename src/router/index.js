@@ -4,6 +4,11 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
   const routes = [
+  {
+    path: '/',
+    name: 'ToDo',
+    component: () => import('@/views/Todos/Todos.vue')
+  }
 ]
 
 const router = new VueRouter({

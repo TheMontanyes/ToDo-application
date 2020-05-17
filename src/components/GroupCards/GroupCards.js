@@ -1,17 +1,18 @@
 import GroupItem from "@/components/GroupItem/GroupItem.vue"
 export default {
+  components: {
+    GroupItem
+  },
   props: {
     cards: {
       type: Array,
       required: true
     }
   },
-  components: {
-    GroupItem
-  },
   methods: {
-    removeСard (id) {
-      this.$emit("remove-card", id);
+    removeCard (index) {
+      this.$delete(this.cards, index)
+      console.log(this.cards)
     }
   }
-};
+}

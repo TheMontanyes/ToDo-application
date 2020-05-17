@@ -4,6 +4,7 @@ import TodoList from '@/components/TodoList/TodoList.vue'
 import AddGroup from '@/components/AddGroup/AddGroup.vue'
 import AddTodo from '@/components/AddTodo/AddTodo.vue'
 import Loader from '@/components/Loader/Loader.vue'
+
 export default {
   components: {
     TodoList, AddTodo, Loader, GroupCards, AddGroup
@@ -17,12 +18,12 @@ export default {
       filterStatus: 'all'
     }
   },
-
+  
   mounted() {
-    fetch('https://jsonplaceholder.typicode.com/todos?_limit=10')
+    fetch('https://jsonplaceholder.typicode.com/todos?_limit=3')
       .then(response => response.json())
-      .then(json => {
-          this.todos = json
+      .then(arr => {
+          this.todos = arr
           this.loading = false
       })
   },
@@ -44,17 +45,7 @@ export default {
   },
 
   methods: {
-    removeCard (index) {
-        this.$delete(this.cards, index)
-        console.log(index)
-    },
-
-    removeTodo (index) {
-        this.$delete(this.todos, index)
-        console.log(index)
-    },
-
-    addTask (todo) {
+    addTodo (todo) {
       if (todo.groupName !== '') {
         this.cards.forEach(card => {
           if (card.titleGroup === todo.groupName) {

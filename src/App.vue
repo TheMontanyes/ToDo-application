@@ -1,16 +1,15 @@
 <template>
-  <div id="app">
-    <Todos/>
-    <router-view/>
-  </div>
+  <router-view/>
 </template>
 
-<script>
-import Todos from "@/components/Todos/Todos.vue"
-
-export default {
-  components: {
-    Todos
+<style lang="scss">
+  @import './assets/css/main.scss';
+  @font-face {
+    font-family: 'Muller';
+    src: local('Muller Regular'),
+    local('MullerRegular'),
+    url('./assets/fonts/MullerRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
   }
-}
-</script>
+</style>

@@ -1,15 +1,15 @@
 export default {
-
   data() {
     return {
       description: '',
       titleTask: '',
-      groupName: ''
+      groupName: '',
+      showModal: false
     }
   },
 
   methods: {
-    addTask() {
+    addTodo() {
       const newTask = {
         id: Date.now(),
         titleTask: this.titleTask,
@@ -19,7 +19,7 @@ export default {
       }
 
       
-      this.$emit('add-task', newTask)
+      this.$emit('add-todo', newTask)
 
       this.description = ''
       this.titleTask = ''

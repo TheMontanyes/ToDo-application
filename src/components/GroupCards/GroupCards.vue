@@ -5,7 +5,7 @@
       :card="card"
       :index="i"
       :key="i"
-      @remove-card="removeСard"
+      @remove-card="removeCard"
     />
   </ul>
 </template>

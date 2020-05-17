@@ -1,5 +1,5 @@
 
-import TodoItem from "@/components/TodoItem/TodoItem.vue";
+import TodoItem from "@/components/TodoItem/TodoItem.vue"
 export default {
   props: {
     todos: {
@@ -11,8 +11,9 @@ export default {
     TodoItem
   },
   methods: {
-    removeTodo(id) {
-      this.$emit("remove-todo", id);
+    removeTodo (index) {
+      this.$delete(this.todos, index)
+      console.log(index)
     }
   }
 };
