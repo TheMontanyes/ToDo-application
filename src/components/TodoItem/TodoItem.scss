@@ -1,0 +1,83 @@
+.label-status {
+	margin: 0 10px 0 60px;
+	border-radius: 5px;
+
+	.checkbox {
+		position: absolute;
+		opacity: 0;
+		z-index: 99;
+		padding: 0;
+		margin: 0;
+		width: 60px;
+		height: 30px;
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 50px;
+		height: 26px;
+		border-radius: 13px;
+		background: teal;
+		box-shadow: inset 0 2px 3px rgba(0,0,0,.2);
+		transition: .2s ease-in-out;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 2px;
+		left: 2px;
+		width: 22px;
+		height: 22px;
+		border-radius: 10px;
+		background: #fff;
+		box-shadow: 0 2px 5px rgba(0,0,0,.3);
+		transition: .2s ease-in-out;
+	}
+}
+
+.todo {
+	&-item {
+		margin-bottom: 40px;
+		height: 200px;
+		.btn-group {
+			position: relative;
+			margin-top: 30px;
+			.btn-small {
+				margin-right: 25px;
+			}
+		}
+	}
+
+	&-title {
+		font-size: 1.2em;
+		font-weight: 700;
+		margin-bottom: 15px;
+	}
+
+	&-completed {
+		background-color: rebeccapurple;
+		color: #fff;
+
+		&::before {
+			background: rebeccapurple;
+		}
+	}
+
+	&-not-completed {
+		background-color: teal;
+		color: #fff;
+
+		&::after {
+			left: 26px;
+		}
+	}
+}
+
+.move-todo {
+	margin-bottom: 0;
+	font-size: 1rem;
+}

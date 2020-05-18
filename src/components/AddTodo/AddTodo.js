@@ -1,29 +1,33 @@
 export default {
-  data() {
+  props: {
+    groupsName: {
+      type: Array,
+      required: false
+    }
+  },
+
+  data () {
     return {
       description: '',
+      groupName: 'new-task',
       titleTask: '',
-      groupName: '',
       showModal: false
     }
   },
 
   methods: {
-    addTodo() {
-      const newTask = {
+    addTodo () {
+      const newTodo = {
         id: Date.now(),
         titleTask: this.titleTask,
         description: this.description,
         groupName: this.groupName,
         completed: false
-      }
-
-      
-      this.$emit('add-todo', newTask)
-
+      }      
+      this.$emit('add-todo', newTodo)
       this.description = ''
       this.titleTask = ''
-      this.groupName = ''
+      this.groupName = 'new-task'
     }
   }
 }

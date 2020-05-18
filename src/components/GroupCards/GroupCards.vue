@@ -1,13 +1,19 @@
 <template>
-  <ul>
+  <div class="group-cards">
     <GroupItem
       v-for="(card, i) of cards"
       :card="card"
       :index="i"
+      :groupsName="cards"
       :key="i"
-      @remove-card="removeCard"
+      @add-todo="addTodo"
+      @delete-card="deleteCard"
     />
-  </ul>
+  </div>
 </template>
 
 <script src="./GroupCards.js"></script>
+
+<style lang="scss">
+  @import './GroupCards.scss';
+</style>

@@ -1,0 +1,35 @@
+.group {
+	background-color: #fff;
+	border-radius: 5px;
+	padding: 10px;
+	display: flex;
+	flex-direction: column;
+
+	&-title {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+
+	&-item {
+		.justify {
+			justify-content: space-around;
+		}
+
+		&__todos {
+			overflow: auto;
+		}
+	}
+}
+
+.todo-item-modal {
+	border: 1px solid #ddd;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+.modal {
+	.filter-name {
+		margin-bottom: 20px;
+	}
+}

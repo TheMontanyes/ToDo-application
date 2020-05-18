@@ -1,0 +1,7 @@
+.group-cards {
+	margin: 20px 0;
+	display: grid;
+	grid-template-columns: repeat(3, 300px);
+	row-gap: 30px;
+	column-gap: 50px;
+}

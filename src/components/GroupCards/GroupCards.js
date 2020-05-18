@@ -1,8 +1,4 @@
-import GroupItem from "@/components/GroupItem/GroupItem.vue"
 export default {
-  components: {
-    GroupItem
-  },
   props: {
     cards: {
       type: Array,
@@ -10,9 +6,11 @@ export default {
     }
   },
   methods: {
-    removeCard (index) {
+    deleteCard (index) {
       this.$delete(this.cards, index)
-      console.log(this.cards)
+    },
+    addTodo (todo) {
+      this.$emit('add-todo', todo)
     }
   }
 }

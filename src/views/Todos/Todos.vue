@@ -3,30 +3,14 @@
     <header class="header">
       <h2 class="header__title">ToDo</h2>
       <div class="btn-group">
-        <AddTodo @add-todo="addTodo"/>
+        <AddTodo :groupsName="cards" @add-todo="addTodo" />
         <AddGroup @add-group="addGroup"/>
       </div>
-    </header>  
+    </header>
     <main class="main">
-      <GroupCards
-        v-if="cards"
-        :cards="cards"
-      /> 
-
-      <select v-model="filterStatus">
-        <option value="all">All</option>
-        <option value="completed">Completed</option>
-        <option value="not-completed">Not Completed</option>
-      </select> 
-
-      <h3>Нераспределенные задачи:</h3>
-
-      <Loader v-if="loading" />
-      <TodoList
-        v-else-if="filteredTodos"
-        :todos="filteredTodos"
-      />
-      <p v-else>No todos!</p>
+      <h3 class="title">Количество групп: {{cards.length}}</h3>
+      <GroupCards :cards="cards" @add-todo="addTodo"/>
+      <TodoList :todos="todos" :groupsName="cards" @add-todo="addTodo" />
     </main>
   </div>
 </template>
@@ -34,5 +18,5 @@
 <script src="./Todos.js"></script>
 
 <style lang="scss">
-  @import './Todos.scss';
+@import "./Todos.scss";
 </style>
