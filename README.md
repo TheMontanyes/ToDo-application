@@ -1,6 +1,6 @@
 # ToDo-application on Vue.js
 
-Просмотреть можно по ссылке - http://montanyes1.beget.tech/
+You can view it at this link - http://montanyes1.beget.tech/
 
 ## Project setup
 ```
