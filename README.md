@@ -1,5 +1,7 @@
 # ToDo-application on Vue.js
 
+Просмотреть можно по ссылке - http://montanyes1.beget.tech/
+
 ## Project setup
 ```
 npm install
