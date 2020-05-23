@@ -9,8 +9,8 @@ export default {
   data () {
     return {
       description: '',
-      groupName: 'new-task',
       titleTask: '',
+      groupName: 'new-task',
       showModal: false
     }
   },
@@ -23,11 +23,12 @@ export default {
         description: this.description,
         groupName: this.groupName,
         completed: false
-      }      
+      }
       this.$emit('add-todo', newTodo)
       this.description = ''
       this.titleTask = ''
       this.groupName = 'new-task'
+      this.showModal = false
     }
   }
 }

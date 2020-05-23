@@ -1,5 +1,5 @@
 <template>
-  <div class="todo-list">
+  <div class="todos">
     <h3 class="title">Нераспределенные задачи: {{filteredTodos.length}}</h3>
     <div class="filters">
       <select class="filter-select select" v-model="filterStatus">
@@ -9,7 +9,7 @@
       </select>
       <input type="text" class="input filter-name" v-model.trim="filterName" placeholder="Потерялась задача?">
     </div>
-    <slot v-if="filteredTodos.length">
+    <div class="todo-list" v-if="filteredTodos.length">
       <TodoItem
         v-for="(todo, i) of filteredTodos"
         :todo="todo"
@@ -19,7 +19,7 @@
         @delete-todo="deleteTodo"
         @add-todo="addTodo"
       />
-    </slot>
+    </div>
     <p class="title" v-else>Нет задач!</p>
   </div>
 </template>

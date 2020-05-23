@@ -9,7 +9,7 @@
     </header>
     <main class="main">
       <h3 class="title">Количество групп: {{cards.length}}</h3>
-      <GroupCards :cards="cards" @add-todo="addTodo"/>
+      <GroupCards :cards="cards" @add-todo="addTodo" v-if="cards.length"/>
       <TodoList :todos="todos" :groupsName="cards" @add-todo="addTodo" />
     </main>
   </div>

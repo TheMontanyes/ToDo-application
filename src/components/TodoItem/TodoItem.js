@@ -16,7 +16,7 @@ export default {
   data() {
     return {
       showDialog: false,
-      groupName: 'all'
+      groupName: this.todo.groupName
     }
   },
   methods: {

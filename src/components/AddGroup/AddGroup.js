@@ -8,7 +8,7 @@ export default {
 
   directives: {
     focus: {
-      inserted: function (el) {
+      inserted: el => {
         el.focus()
       }
     },
@@ -23,8 +23,8 @@ export default {
       }
 
       this.$emit('add-group', newGroup)
-
       this.titleGroup = ''
+      this.showModal = false
     }
   }
 }

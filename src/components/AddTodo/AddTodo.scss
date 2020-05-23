@@ -8,6 +8,11 @@
 		width: 100%;
 	}
 
+	&__no-groups {
+		color: red;
+		margin-bottom: 15px;
+	}
+
 	&__form {
 		textarea {
 			resize: none;
